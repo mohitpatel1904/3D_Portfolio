@@ -25,7 +25,9 @@ const ProjectsCarousel = () => {
       const row = i % 2; // 0 or 1
       const column = Math.floor(i / 2);
 
-      const angle = (fov / Math.max(columns - 1, 1)) * column;
+      // Center the arc perfectly in front of the camera (around PI/2)
+      const startAngle = Math.PI / 2 - (fov / 2);
+      const angle = startAngle + (fov / Math.max(columns - 1, 1)) * column;
 
       const z = -distance * Math.sin(angle);
       const x = -distance * Math.cos(angle);
@@ -51,7 +53,7 @@ const ProjectsCarousel = () => {
   }, [activeId, isActive]);
 
   return (
-    <group rotation={[0, -Math.PI / 12, 0]}>
+    <group rotation={[0, 0, 0]}>
       {tiles}
     </group>
   );

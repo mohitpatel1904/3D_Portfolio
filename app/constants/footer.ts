@@ -13,4 +13,10 @@ export const FOOTER_LINKS: FooterLink[] = [
     icon: 'icons/github.svg',
     url: 'https://github.com/mohitpatel1904',
   },
+  {
+    name: 'Email',
+    hoverText: 'Send me an email',
+    icon: 'icons/mail.svg',
+    url: 'mailto:mp1942458@gmail.com',
+  },
 ];

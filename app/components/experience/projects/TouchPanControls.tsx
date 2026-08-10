@@ -68,7 +68,7 @@ export const TouchPanControls = () => {
       const newRotationY = cameraRotationRef.current.x + deltaX * sensitivity
 
       // Apply rotation limits to prevent over-rotation
-      const maxRotation = Math.PI / 3
+      const maxRotation = Math.PI / 4
       targetRotationRef.current.x = Math.max(Math.min(newRotationY, maxRotation), -maxRotation)
     }
 

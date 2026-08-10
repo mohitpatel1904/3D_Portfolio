@@ -9,8 +9,8 @@ import * as THREE from "three";
 import { WORK_TIMELINE } from "@constants";
 import { WorkTimelinePoint } from "@types";
 
-const reusableLeft = new THREE.Vector3(-0.3, 0, -0.1);
-const reusableRight = new THREE.Vector3(0.3, 0, -0.1);
+const reusableLeft = new THREE.Vector3(-0.5, 0, -0.1);
+const reusableRight = new THREE.Vector3(0.5, 0, -0.1);
 
 const TimelinePoint = ({ point, diff }: { point: WorkTimelinePoint, diff: number }) => {
   const getPoint = useMemo(() => {
@@ -33,8 +33,8 @@ const TimelinePoint = ({ point, diff }: { point: WorkTimelinePoint, diff: number
   const titleProps = useMemo(() => ({
     ...textProps,
     font: "./soria-font.ttf",
-    fontSize: 0.6,
-    maxWidth: 3,
+    fontSize: 0.35,
+    maxWidth: 2.0,
   }), [textProps]);
 
   return (
@@ -45,14 +45,14 @@ const TimelinePoint = ({ point, diff }: { point: WorkTimelinePoint, diff: number
       </Box>
       <group>
         <group position={getPoint}>
-          <Text {...textProps} fontSize={0.3} position={[-diff / 2, 0, 0]}>
+          <Text {...textProps} fontSize={0.25} position={[-diff / 2, 0, 0]}>
             {point.year}
           </Text>
           <group position={[0, -0.5, 0]}>
-            <Text {...titleProps} fontSize={0.6} maxWidth={3} position={[0, -diff / 2, 0]}>
+            <Text {...titleProps} position={[0, -diff / 2, 0]}>
               {point.title}
             </Text>
-            <Text {...textProps} fontSize={0.2} position={[0, -0.4 - diff, 0]}>
+            <Text {...textProps} fontSize={0.18} position={[0, -0.6 - diff, 0]}>
               {point.subtitle}
             </Text>
           </group>

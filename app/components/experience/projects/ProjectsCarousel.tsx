@@ -15,8 +15,9 @@ const ProjectsCarousel = () => {
     setSelectedId(id === selectedId ? null : id);
   };
   const tiles = useMemo(() => {
-    const fov = Math.PI;
-    const distance = 10;
+    // Tuned for 10 projects (5 columns of 2)
+    const fov = Math.PI * 0.7;  // 126° arc for 5 columns
+    const distance = 9;
 
     const columns = Math.ceil(PROJECTS.length / 2);
 
@@ -24,7 +25,7 @@ const ProjectsCarousel = () => {
       const row = i % 2; // 0 or 1
       const column = Math.floor(i / 2);
 
-      const angle = (fov / columns) * column;
+      const angle = (fov / Math.max(columns - 1, 1)) * column;
 
       const z = -distance * Math.sin(angle);
       const x = -distance * Math.cos(angle);
@@ -32,7 +33,7 @@ const ProjectsCarousel = () => {
       const rotY = Math.PI / 2 - angle;
 
       // vertical stacking
-      const y = row === 0 ? 3.25 : 1;
+      const y = row === 0 ? 3.5 : 1;
       const datePosition = row === 0 ? 'top' : 'bottom';
       return (
         <ProjectTile

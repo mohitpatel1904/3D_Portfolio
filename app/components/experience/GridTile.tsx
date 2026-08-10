@@ -129,10 +129,10 @@ const GridTile = (props: GridTileProps) => {
 
   const fontProps: Partial<TextProps> = {
     font: "./soria-font.ttf",
-    maxWidth: 2,
+    maxWidth: 3,
     anchorX: 'center',
     anchorY: 'bottom',
-    fontSize: 0.7,
+    fontSize: 0.5,
     color: 'white',
     textAlign: textAlign,
     fillOpacity: 0,

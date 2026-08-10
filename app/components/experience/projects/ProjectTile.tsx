@@ -114,29 +114,29 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick, da
           position={[-1.9, -0.8, 0.101]}
           anchorX="left"
           anchorY="bottom"
-          maxWidth={4}
-          fontSize={0.8}>
+          maxWidth={3.8}
+          fontSize={0.5}>
           {project.title}
         </Text>
         <group position={[-1.25, 1.4, 0.01]}>
           <mesh>
-            <planeGeometry args={[1.7, 0.4, 1]} />
+            <planeGeometry args={[2.0, 0.4, 1]} />
             <meshBasicMaterial color="#777" opacity={0} wireframe />
             <Edges color="black" lineWidth={1} />
           </mesh>
           <Text
             {...subtitleProps}
-            position={[-0.7, 0.2, 0]}
-            fontSize={0.3}>
+            position={[-0.85, 0.2, 0]}
+            fontSize={0.22}>
             {project.date.toUpperCase()}
           </Text>
         </group>
         <Text
           {...subtitleProps}
-          maxWidth={3.8}
+          maxWidth={3.6}
           position={[-1.9, 2.3, 0.1]}
           // scale={[0, 0, 1]}
-          fontSize={0.2}>
+          fontSize={0.16}>
           {project.subtext}
         </Text>
         {project.url && (

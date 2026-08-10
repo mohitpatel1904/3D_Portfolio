@@ -19,9 +19,9 @@ const Projects = () => {
     data.el.style.overflow = isActive ? 'hidden' : 'auto';
     if (isActive) {
       if (isMobile) {
-        gsap.to(camera.position, { z: 11.5, y: -39, x: 1, duration: 1 });
+        gsap.to(camera.position, { z: 11.5, y: -39, x: 0, duration: 1 });
       } else {
-        gsap.to(camera.position, { y: -39, x: 2, duration: 1 });
+        gsap.to(camera.position, { y: -39, x: 0, duration: 1 });
       }
     }
   }, [isActive]);
@@ -30,7 +30,7 @@ const Projects = () => {
     if (isActive) {
       if (!isMobile) {
         camera.rotation.y = THREE.MathUtils.lerp(camera.rotation.y, -(state.pointer.x * Math.PI) / 4, 0.03);
-        camera.position.z = THREE.MathUtils.damp(camera.position.z, 11.5 - state.pointer.y, 7, delta);
+        camera.position.z = THREE.MathUtils.damp(camera.position.z, 11.5 - state.pointer.y * 0.5, 7, delta);
       }
     }
   });

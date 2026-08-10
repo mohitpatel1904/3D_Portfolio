@@ -14,13 +14,13 @@ const vercettiFont = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com/'),
-  title: "Mohit Virli ✌️",
-  description: "A frontend developer by profession, a creative at heart.",
-  keywords: "Mohit Virli, Frontend Engineer, React Developer, Three.js, Creative Developer, Web Development, Angular, JavaScript, TypeScript, Portfolio",
-  authors: [{ name: "Mohit Virli" }],
-  creator: "Mohit Virli",
-  publisher: "Mohit Virli",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://mohitpatel1904.github.io/'),
+  title: "Patel Mohit 🤖",
+  description: "AI Engineer & ML Engineer. Building intelligent systems with Python, Computer Vision, NLP and Large Language Models.",
+  keywords: "Patel Mohit, AI Engineer, Machine Learning, Python, Computer Vision, NLP, OpenCV, MediaPipe, Flask, CatBoost, XGBoost, Scikit-learn, GEC Bhavnagar, Portfolio",
+  authors: [{ name: "Patel Mohit" }],
+  creator: "Patel Mohit",
+  publisher: "Patel Mohit",
   formatDetection: {
     email: false,
     address: false,
@@ -37,19 +37,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Mohit Virli - Frontend Engineer",
-    description: "Frontend engineer by profession, creative at heart.",
-    siteName: "Mohit Virli's Portfolio",
+    title: "Patel Mohit - AI & ML Engineer",
+    description: "AI Engineer building intelligent systems. MLOps, Computer Vision, NLP, RAG.",
+    siteName: "Patel Mohit's Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohit Virli - Frontend Engineer",
-    description: "Frontend engineer by profession, creative at heart.",
-  },
-  verification: {
-    google: "GsRYY-ivL0F_VKkfs5KAeToliqz0gCrRAJKKmFkAxBA",
+    title: "Patel Mohit - AI & ML Engineer",
+    description: "AI Engineer building intelligent systems. MLOps, Computer Vision, NLP, RAG.",
   },
 };
 
